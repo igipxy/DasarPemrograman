@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class arrayNumbers10 {
     public static void main(String[] args) {
 
