@@ -23,6 +23,17 @@ public class arrayAverageScore10 {
         // Step 7: Calculate average
         average = total / score.length;
         System.out.println("The class average score is " + average);
+
+        // Add this after calculating the average (or anywhere after input)
+
+        int passedCount = 0;
+        for (int i = 0; i < score.length; i++) {
+        if (score[i] > 70) {
+        passedCount++;  // Increase count for each passing student
+            }
+        }
+
+        System.out.println("Number of students who passed: " + passedCount);
         
         sc.close();
     }
