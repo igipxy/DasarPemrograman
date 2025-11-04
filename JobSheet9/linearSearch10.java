@@ -28,6 +28,14 @@ public class linearSearch10 {
             }
         }
         
+        
+        if (result != -1) {
+            System.out.println("The key in the array is located at index position " + result);
+        } else {
+            System.out.println("Key not found");
+        }
+
+        
         // Display result
         System.out.println("The key in the array is located at index position " + result);
         
