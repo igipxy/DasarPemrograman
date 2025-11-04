@@ -2,40 +2,48 @@ import java.util.Scanner;
 
 public class arrayAverageScore10 {
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in);
         
-        // Step 4: Create array and variables
-        int[] score = new int[10];
-        double total = 0;
-        double average;
+        // Ask for number of students
+        System.out.print("Enter the number of students: ");
+        int numStudents = sc.nextInt();
         
-        // Step 5: Input scores
+        int[] score = new int[numStudents];
+        double totalPassed = 0, totalFailed = 0;
+        int countPassed = 0, countFailed = 0;
+        
+        
         for (int i = 0; i < score.length; i++) {
-            System.out.print("Enter student score " + (i + 1) + ": ");
+            System.out.print("Enter the final score " + i + ": ");
             score[i] = sc.nextInt();
         }
-        
-        // Step 6: Calculate total
+    
         for (int i = 0; i < score.length; i++) {
-            total += score[i];  // Add each score to total
-        }
-        
-        // Step 7: Calculate average
-        average = total / score.length;
-        System.out.println("The class average score is " + average);
-
-        // Add this after calculating the average (or anywhere after input)
-
-        int passedCount = 0;
-        for (int i = 0; i < score.length; i++) {
-        if (score[i] > 70) {
-        passedCount++;  // Increase count for each passing student
+            if (score[i] > 70) {
+                totalPassed += score[i];
+                countPassed++;
+            } else {
+                totalFailed += score[i];
+                countFailed++;
             }
         }
-
-        System.out.println("Number of students who passed: " + passedCount);
+        
+      
+        if (countPassed > 0) {
+            double averagePassed = totalPassed / countPassed;
+            System.out.println("The average score of students who passed is " + averagePassed);
+        } else {
+            System.out.println("No students passed!");
+        }
+        
+        if (countFailed > 0) {
+            double averageFailed = totalFailed / countFailed;
+            System.out.println("The average score of students who failed is " + averageFailed);
+        } else {
+            System.out.println("No students failed!");
+        }
         
         sc.close();
     }
 }
-
