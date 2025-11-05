@@ -9,7 +9,7 @@ public class foodAndBeveragesOrder10 {
 
         System.out.print("Enter number of orders: ");
         int numOrders = sc.nextInt();
-        sc.nextLine(); // consume trailing newline after nextInt()
+        sc.nextLine(); 
 
         String[] orderNames = new String[numOrders];
         double[] orderPrices = new double[numOrders];
@@ -21,7 +21,7 @@ public class foodAndBeveragesOrder10 {
             orderNames[i] = sc.nextLine();
             System.out.print("Enter price: ");
             orderPrices[i] = sc.nextDouble();
-            sc.nextLine(); // consume trailing newline after nextDouble()
+            sc.nextLine(); 
 
             totalCost += orderPrices[i];
         }
