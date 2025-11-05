@@ -7,8 +7,9 @@ public class foodAndBeveragesOrder10 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter number of orders: ");
+        System.out.print("Enter number of orders: ");
         int numOrders = sc.nextInt();
+        sc.nextLine(); // consume trailing newline after nextInt()
 
         String[] orderNames = new String[numOrders];
         double[] orderPrices = new double[numOrders];
@@ -20,15 +21,16 @@ public class foodAndBeveragesOrder10 {
             orderNames[i] = sc.nextLine();
             System.out.print("Enter price: ");
             orderPrices[i] = sc.nextDouble();
+            sc.nextLine(); // consume trailing newline after nextDouble()
 
             totalCost += orderPrices[i];
         }
 
         System.out.println("\n=== ORDER SUMMARY ===");
         for (int i = 0; i < numOrders; i++) {
-            System.out.println((i + 1) + ". " + orderNames[i] + " - $" + orderPrices[i]);
+            System.out.println((i + 1) + ". " + orderNames[i] + " - Rp." + orderPrices[i]);
         }
-        System.out.println("Total Cost: $" + totalCost);
+        System.out.println("Total Cost: Rp." + totalCost);
         
         sc.close();
     
