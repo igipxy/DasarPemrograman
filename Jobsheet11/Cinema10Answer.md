@@ -8,4 +8,14 @@ Answer!
 
 4. so the function of audience.length is for the range of the array in this case is 4 row, and for the audience[0].length it will check the range of the colloumn of array 0 row and that will be 2 and so the other 3
 
-5. 
+5. Modified
+
+6. modifeid for each loop
+
+7. in my opinion its more readable
+
+8. is 4
+
+9. is 2
+
+10. 
