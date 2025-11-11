@@ -28,6 +28,7 @@ public class DoWhileLeaveEntitlement10 {
             }
         }while(leaveEntitlement > 0);
         System.out.println("You have used all your leave entitlement.");
+        input.close();
     }
 
 }
