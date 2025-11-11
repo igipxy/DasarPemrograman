@@ -18,4 +18,12 @@ Answer!
 
 9. is 2
 
-10. 
+10. added
+
+11. changed for each
+
+12. displayed audience name each line
+
+13. string.join is for simplifies a string it will be coonect with a string that inputet in the cinema 10 the String.join ", " so the gap between string there will be the coma
+
+14. commited
