@@ -24,35 +24,40 @@ public class CinemaWithScanner10 {
 
                     int row, column;
 
-                    // Ask for valid row number
                     while (true) {
-                        System.out.print("Enter row number (1-4): ");
-                        row = sc.nextInt();
-                        if (row >= 1 && row <= 4) break;
-                        System.out.println("Invalid row! Please enter between 1 and 4.");
-                    }
+                        // Input and validate row
+                        while (true) {
+                            System.out.print("Enter row number (1-4): ");
+                            row = sc.nextInt();
+                            if (row >= 1 && row <= 4) break;
+                            System.out.println("Invalid row! Please enter between 1 and 4.");
+                        }
 
-                    // Ask for valid column number
-                    while (true) {
-                        System.out.print("Enter column number (1-2): ");
-                        column = sc.nextInt();
-                        if (column >= 1 && column <= 2) break;
-                        System.out.println("Invalid column! Please enter between 1 and 2.");
-                    }
+                        // Input and validate column
+                        while (true) {
+                            System.out.print("Enter column number (1-2): ");
+                            column = sc.nextInt();
+                            if (column >= 1 && column <= 2) break;
+                            System.out.println("Invalid column! Please enter between 1 and 2.");
+                        }
 
-                    sc.nextLine(); // consume newline
-
-                    // Check if seat is taken
-                    if (audience[row - 1][column - 1] != null) {
-                        System.out.println("Seat already taken by " + audience[row - 1][column - 1]);
-                    } else {
-                        audience[row - 1][column - 1] = name;
-                        System.out.println("Successfully added audience: " + name);
+                        // Check if seat is occupied
+                        if (audience[row - 1][column - 1] != null) {
+                            System.out.println("Seat already taken by " + audience[row - 1][column - 1]);
+                            System.out.println("Please choose another seat.\n");
+                        } else {
+                            // Seat is free — assign it
+                            audience[row - 1][column - 1] = name;
+                            System.out.println("Successfully added audience: " + name);
+                            break;
+                        }
                     }
+                    sc.nextLine(); // consume leftover newline
                     break;
 
                 case 2:
                     System.out.println("\n===== AUDIENCE LIST =====");
+                    System.out.println("(*** means empty seat)\n");
                     for (int i = 0; i < audience.length; i++) {
                         for (int j = 0; j < audience[i].length; j++) {
                             String occupant = (audience[i][j] == null) ? "***" : audience[i][j];
