@@ -58,7 +58,7 @@ public class SistemKPU {
         System.out.println("Percentage for each candidate:");
         for (int j = 0; j < jumlahKandidat; j++) {
             double percentage = (totalVotes > 0) ? (double) totalVotesPerCandidate[j] / totalVotes * 100 : 0;
-            System.out.printf("Candidate %d: %.2f%%", (j + 1), percentage);
+            System.out.printf("Candidate %d: %.2f%% ", (j + 1), percentage);
         }
 
         //winner from each region
