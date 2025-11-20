@@ -4,14 +4,14 @@ import java.util.Scanner;
 public class SistemKPU {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner masuk = new Scanner(System.in);
 
         //input
         System.out.print("Input region: ");
-        int jumlahDaerah = sc.nextInt();
+        int jumlahDaerah = masuk.nextInt();
 
         System.out.print( "how many candidate: ");
-        int jumlahKandidat = sc.nextInt();
+        int jumlahKandidat = masuk.nextInt();
 
         int[][] votes = new int[jumlahDaerah][jumlahKandidat];
 
@@ -19,10 +19,11 @@ public class SistemKPU {
             System.out.println("Region " + (i + 1) + ":");
             for (int j = 0; j < jumlahKandidat; j++) {
                 System.out.print("  Votes for Candidate " + (j + 1) + ": ");
-                votes[i][j] = sc.nextInt();
+                votes[i][j] = masuk.nextInt();
             }
         }
         //this is for table
+        System.out.println();
         System.out.println("Vote Results Table:" );
         System.out.println("-------------------");
         System.out.print("Region ");
@@ -54,14 +55,16 @@ public class SistemKPU {
             totalVotes += vote;
         }
 
-        //display precentage
+        //this is for displaying precentage
+        System.out.println("");
         System.out.println("Percentage for each candidate:");
         for (int j = 0; j < jumlahKandidat; j++) {
             double percentage = (totalVotes > 0) ? (double) totalVotesPerCandidate[j] / totalVotes * 100 : 0;
             System.out.printf("Candidate %d: %.2f%% ", (j + 1), percentage);
         }
 
-        //winner from each region
+        //this is the winner from each region
+        System.out.println("");
         System.out.println("\nWinner for each region:");
         for (int i = 0; i < jumlahDaerah; i++) {
             int maxVotes = 0;
@@ -75,7 +78,7 @@ public class SistemKPU {
             System.out.println("Region " + (i + 1) + ": Candidate " + winnerCandidate + " with " + maxVotes + " votes");
         }
 
-        sc.close();
+        masuk.close();
     }   
     
 
