@@ -24,15 +24,18 @@ public class SistemKPU {
         }
         //this is for table
         System.out.println("Vote Results Table:" );
-        System.out.print("Region");
+        System.out.println("-------------------");
+        System.out.print("Region ");
         for (int j = 0; j < jumlahKandidat; j++) {
             System.out.print("Candidate " + (j + 1) + " ");
         }
+
         System.out.println();
+
         for (int i = 0; i < jumlahDaerah; i++) {
             System.out.print((i + 1) + " ");
             for (int j = 0; j < jumlahKandidat; j++) {
-                System.out.print(votes[i][j] + "\t\t");
+                System.out.print(votes[i][j] + "          ");
             }
             System.out.println();
         }
@@ -45,20 +48,20 @@ public class SistemKPU {
             }
         }
 
-        // Calculate total votes overall
+        //this one Calculate total votes overall
         int totalVotes = 0;
         for (int vote : totalVotesPerCandidate) {
             totalVotes += vote;
         }
 
-        // Display percentages for each candidate
-        System.out.println("\nPercentage for each candidate:");
+        //display precentage
+        System.out.println("Percentage for each candidate:");
         for (int j = 0; j < jumlahKandidat; j++) {
             double percentage = (totalVotes > 0) ? (double) totalVotesPerCandidate[j] / totalVotes * 100 : 0;
-            System.out.printf("Candidate %d: %.2f%%\n", (j + 1), percentage);
+            System.out.printf("Candidate %d: %.2f%%", (j + 1), percentage);
         }
 
-        // Determine winner for each region
+        //winner from each region
         System.out.println("\nWinner for each region:");
         for (int i = 0; i < jumlahDaerah; i++) {
             int maxVotes = 0;
