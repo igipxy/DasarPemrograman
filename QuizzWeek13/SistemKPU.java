@@ -23,7 +23,7 @@ public class SistemKPU {
             }
         }
         //this is for table
-        System.out.println();
+        System.out.println("");
         System.out.println("Vote Results Table:" );
         System.out.println("-------------------");
         System.out.print("Region ");
