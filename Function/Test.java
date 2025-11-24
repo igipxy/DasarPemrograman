@@ -1,22 +1,29 @@
 package Function;
 
+import java.util.Scanner;
+
 public class Test {
-    public static void malam() {
-        System.out.println("NASIJUY ANJENG");
+    public static void ayam() {
+        System.out.println("Cooking AYAM");
 
     }
 
-    public static void siang() {
-        System.out.println("Halo sir");
-        System.out.println("halo mok");
+    public static void bebek() {
+        System.out.println("Making BEBEK");
+        
 
     }
 
     public static void main(String[] args) {
-        if (args[0].equals("siang")) {
-            siang();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Choose (1. Ayam / 2. Bebek): ");
+        int choice = sc.nextInt();
+        if (choice == 1) {
+            ayam();
+        } else if (choice == 2) {
+            bebek();
         } else {
-            malam();
+            System.out.println("Invalid choice");
         }   
     }
 
