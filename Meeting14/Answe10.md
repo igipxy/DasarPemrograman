@@ -48,4 +48,14 @@ konteks = Jumlah porsi atau kuantitas dari menu yang dipesan.
 
 3. done
 
-4. done 
+4. done
+
+2.4
+
+1. Penulisan String... namaPengunjung menggunakan fitur Java yang disebut Varargs (Variable Arguments). Tujuan: Untuk memungkinkan fungsi menerima nol atau lebih argumen (input) dari tipe data yang sama (String)
+
+2. done
+
+3. Tidak, kita tidak bisa menggunakan dua parameter varargs dalam satu fungsi misalnya String dan int
+
+4. Jika fungsi daftarPengunjung dipanggil tanpa argumen, yaitu daftarPengunjung(); : Program akan tetap berjalan (tidak error). Varargs dirancang untuk menerima nol atau lebih argumen. Ketika dipanggil tanpa argumen, Java akan membuat array namaPengunjung dengan panjang nol (namaPengunjung.length adalah 0).
