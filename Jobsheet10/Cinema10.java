@@ -1,4 +1,4 @@
-package Jobsheet11;
+package Jobsheet10;
 
 public class Cinema10 {
     public static void main(String[] args) {
